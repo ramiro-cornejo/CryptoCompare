@@ -5,34 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crypto Compare</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
 
-    <div>
-        <div>
-            <div>
-                <label>Elige tu Moneda</label>
-                <select name="moneda">
-                        <option value="">Elige tu moneda</option>
-                        <option value="USD">Dolar Estadounidense</option>
-                        <option value="MXN">Peso Mexicano</option>
-                        <option value="GBP">Libras</option>
-                        <option value="EUR">Euros</option>
-                        <option value="ARG">Pesos Argentinos</option>
-                </select>
+    <div class="container">
+        <div class="row">
+            <div class="one-half column">
+                <img class="animate__animated animate__fadeInUp" src="img/crypto.png">
             </div>
-            <div>
-                <div>
-                    <label>Elige tu Criptomoneda</label>
-                    <select name="criptomoneda">
-                        <option value="">Elige tu criptomoneda</option>
-                    </select>
-                </div>
-            </div>
-            <div>
-                <input type="submit" value="Cotizar" />
+            <div class="one-half column">
+                <form>
+                    <div class="row">
+                        <label>Elige tu Moneda</label>
+                        <select name="moneda">
+                            <option value="">Elige tu moneda</option>
+                            <option value="USD">Dolar Estadounidense</option>
+                            <option value="MXN">Peso Mexicano</option>
+                            <option value="GBP">Libras</option>
+                            <option value="EUR">Euros</option>
+                            <option value="ARG">Pesos Argentinos</option>
+                        </select>
+                    </div>
 
-                <div></div>
+                    <div class="row">
+                        <div>
+                            <label>Elige tu Criptomoneda</label>
+                            <select class="u-full-width" id="" name="criptomoneda">
+                                <option value="">Elige tu criptomoneda</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <input class="button-primary u-full-width" type="submit" value="Cotizar" />
+
+                        <div class="resultado"></div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
