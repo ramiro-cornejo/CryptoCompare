@@ -1,5 +1,7 @@
 body {
-    background-color: #1c2062;
+    /*background: linear-gradient(to right, #57408c,#1a2c4c);*/
+    background-color: #1a2c4c;
+    width: 100%;
 }
 img {
     max-width: 100%;
@@ -25,6 +27,15 @@ h1::after {
     width: 100%;
 }
 
+.container-footer{
+    background-color: #1a2c4c;
+    color: #ffffff;
+    text-align:start;
+    width: 100%;
+    padding-bottom: 10%;
+    padding-top: 5%;
+    
+}
 
 label {
     color: white;
@@ -41,7 +52,7 @@ input[type="submit"]{
     height: auto;
 }
 .error {
-    background-color: #b7322c;
+    background-color: #00aee0;
     padding: 1rem;
     color: white;
     font-size: 18px;
