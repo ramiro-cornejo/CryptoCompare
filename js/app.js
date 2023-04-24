@@ -47,7 +47,7 @@ function selectCriptomonedas(criptomonedas) {
 }
 
 
-function leerValor(e)  {
+function leerValor(e) {
     objBusqueda[e.target.name] = e.target.value;
 }
 
@@ -55,7 +55,7 @@ function submitFormulario(e) {
     e.preventDefault();
 
     // Extraer los valores
-    const { moneda, criptomoneda} = objBusqueda;
+    const {moneda, criptomoneda} = objBusqueda;
 
     if(moneda === '' || criptomoneda === '') {
         mostrarAlerta('Ambos campos son obligatorios');
@@ -75,7 +75,7 @@ function mostrarAlerta(mensaje) {
         divMensaje.textContent = mensaje;
 
         // Insertar en el DOM
-       formulario.appendChild(divMensaje);
+        formulario.appendChild(divMensaje);
 
         // Quitar el alert despues de 3 segundos
         setTimeout( () => {
@@ -102,8 +102,7 @@ function mostrarCotizacionHTML(cotizacion) {
 
     limpiarHTML();
 
-    console.log(cotizacion);
-    const  { PRICE, HIGHDAY, LOWDAY, CHANGEPCT24HOUR, LASTUPDATE } = cotizacion;
+    const  { PRICE, HIGHDAY, LOWDAY, CHANGEPCT24HOUR, LASTUPDATE} = cotizacion;
 
 
     const precio = document.createElement('p');
@@ -151,3 +150,10 @@ function limpiarHTML() {
         resultado.removeChild(resultado.firstChild);
     }
 }
+
+function refreshPage() {
+    location.reload();
+}
+
+const refreshBtn = document.getElementById('refresh-btn');
+refreshBtn.addEventListener('click', refreshPage);
